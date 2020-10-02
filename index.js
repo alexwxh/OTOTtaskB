@@ -15,7 +15,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/cs3219', { useNewUrlParser: true});
+const MONGO_URI = 'mongodb+srv://user:cs3219task@cs3219task.46u77.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority';
+mongoose.connect(MONGO_URI || 'mongodb://localhost/cs3219', { useNewUrlParser: true, useUnifiedTopology: true});
 var db = mongoose.connection;
 
 // Added check for DB connection
