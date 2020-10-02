@@ -49,7 +49,7 @@ exports.update = function (req, res) {
     Fruit.findById(req.params.fruit_id, function (err, fruit) {
         if (err)
             res.send(err);
-        fruit.name = req.body.name ? req.body.name : fruit.name;
+        fruit.name = req.body.name;
         fruit.color = req.body.color;
         fruit.taste = req.body.taste;
 // save the fruit and check for errors
@@ -57,7 +57,7 @@ exports.update = function (req, res) {
             if (err)
                 res.json(err);
             res.json({
-                message: 'fruit Info updated',
+                message: 'fruit info updated',
                 data: fruit
             });
         });
