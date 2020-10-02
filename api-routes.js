@@ -5,19 +5,18 @@ let router = require('express').Router();
 router.get('/', function (req, res) {
     res.json({
         status: 'API Its Working',
-        message: 'Welcome to RESTHub crafted with my tears!'
+        message: 'Welcome to this api crafted with my tears!'
     });
 });
-// Import contact controller
-var contactController = require('./contactController');
-// Contact routes
-router.route('/contacts')
-    .get(contactController.index)
-    .post(contactController.new);
-router.route('/contacts/:contact_id')
-    .get(contactController.view)
-    .patch(contactController.update)
-    .put(contactController.update)
-    .delete(contactController.delete);
+// Import fruit controller
+var fruitController = require('./fruitController');
+// fruit routes
+router.route('/fruits')
+    .get(fruitController.index)
+    .post(fruitController.new);
+router.route('/fruits/:fruit_id')
+    .get(fruitController.view)
+    .put(fruitController.update)
+    .delete(fruitController.delete);
 // Export API routes
 module.exports = router;

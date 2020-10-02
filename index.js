@@ -28,7 +28,7 @@ else
 var port = process.env.PORT || 8080;
 
 // Send message for default URL
-app.get('/', (req, res) => res.send('Hello World with Express and Nodemon'));
+app.get('/', (req, res) => res.send('Hi, this is Task B of CS3219'));
 
 // Use Api routes in the App
 app.use('/api', apiRoutes);
