@@ -11,7 +11,7 @@ steps:
       - functions
       - deploy
       - fruitStuff
-      - --entry-point=app
+      - --entry-point=router
       - --runtime=nodejs12
       - --source=.
       - --trigger-http
