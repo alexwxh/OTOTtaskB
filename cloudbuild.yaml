@@ -1,0 +1,18 @@
+# [START functions_ci_cd_cloud_build]
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args:
+      - install
+  - name: 'gcr.io/cloud-builders/npm'
+    args:
+      - test
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - functions
+      - deploy
+      - fruitStuff
+      - --entry-point=app
+      - --runtime=nodejs12
+      - --source=.
+      - --trigger-http
+# [END functions_ci_cd_cloud_build]
