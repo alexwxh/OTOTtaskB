@@ -19,7 +19,7 @@ describe('GET method', () => {
 
 describe('api GET method', () => {
     it('should return 200', (done) => {
-        supertest(app).get('/api/fruits')
+        supertest(app).get('/api')
             .expect(200)
             .end(function(err, res){
                 if (err) done(err);
