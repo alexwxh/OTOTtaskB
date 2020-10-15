@@ -8,7 +8,7 @@ steps:
       - functions
       - deploy
       - fruitStuff
-      - --entry-point=router
+      - --entry-point=./api-routes.js
       - --runtime=nodejs12
       - --source=.
       - --trigger-http
