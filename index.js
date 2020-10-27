@@ -6,6 +6,7 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 // Initialise the app
 let app = express();
+let cors = require('cors');
 
 // Import routes
 let apiRoutes = require("./api-routes");
@@ -13,6 +14,7 @@ let apiRoutes = require("./api-routes");
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(cors());
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
 const MONGO_URI = 'mongodb+srv://user:cs3219task@cs3219task.46u77.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority';
