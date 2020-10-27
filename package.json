@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --exit",
     "start": "node index.js",
-    "heroku-prebuild": "cd taskbfrontend"
+    "heroku-postbuild": "cd taskbfrontend && npm install && npm run build"
   },
   "keywords": [
     "api",
